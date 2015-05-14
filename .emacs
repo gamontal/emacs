@@ -1,3 +1,4 @@
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -23,14 +24,14 @@
  '(highlight ((t (:background "gray6" :foreground "white"))))
  '(link ((t (:foreground "yellow green" :underline t))))
  '(minibuffer-prompt ((t (:foreground "magenta1"))))
+ '(mode-line-buffer-id ((t (:background "blue" :foreground "white" :weight bold))))
  '(region ((t (:background "blue" :foreground "white")))))
 
 ;; turn off bell 
  (setq ring-bell-function 'ignore)
 
-;; fullscreen on startup
+;; fullscreen startup
 (w32-send-sys-command 61488)
 
-;; highlight current row
+;; highlight rows
 (global-hl-line-mode t)
-
