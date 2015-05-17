@@ -21,10 +21,11 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "gray0" :foreground "gray89" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 135 :width normal :foundry "outline" :family "Consolas"))))
  '(cursor ((t (:background "white"))))
- '(highlight ((t (:background "gray6" :foreground "white"))))
+ '(highlight ((t (:background "gray7" :foreground "white"))))
  '(link ((t (:foreground "yellow green" :underline t))))
  '(minibuffer-prompt ((t (:foreground "magenta1"))))
  '(mode-line-buffer-id ((t (:background "blue" :foreground "white" :weight bold))))
+ '(mode-line-inactive ((t (:inherit mode-line :background "gray4" :foreground "grey80" :box (:line-width -1 :color "grey40") :weight light))))
  '(region ((t (:background "blue" :foreground "white")))))
 
 ;; turn off bell 
