@@ -21,6 +21,9 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "gray0" :foreground "gray89" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 135 :width normal :foundry "outline" :family "Consolas"))))
  '(cursor ((t (:background "white"))))
+ '(font-lock-comment-face ((t (:foreground "spring green"))))
+ '(font-lock-string-face ((t (:foreground "PaleGreen1"))))
+ '(font-lock-variable-name-face ((t (:foreground "chartreuse"))))
  '(highlight ((t (:background "gray7" :foreground "white"))))
  '(link ((t (:foreground "yellow green" :underline t))))
  '(minibuffer-prompt ((t (:foreground "magenta1"))))
