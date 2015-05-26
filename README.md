@@ -14,7 +14,7 @@ To use the MELPA repository, you'll need an Emacs with package.el. Emacs 24 has 
 
 In order for the projectile and auto-complete packages to work you need to add the MELPA repository to your settings. Keep in mind that there are various ways to this. Visit http://melpa.org/#/getting-started for more information.
 
-**Adding the MELPA repo to emacs package list**
+**Adding the MELPA repo to emacs package archive list**
 
 Step 1:
 
