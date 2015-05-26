@@ -39,3 +39,7 @@
 
 ;; highlight rows
 (global-hl-line-mode t)
+
+;; enable projectile
+(require 'projectile )
+(projectile-global-mode)
