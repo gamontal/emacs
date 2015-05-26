@@ -25,4 +25,7 @@ Step 2:
 
 Select the Package Archives option and add the following link: http://melpa.org/packages/. Remember to save your changes for future sessions. 
 
+![ScreenShot](https://raw.github.com/gmontalvo5416/emacs-config/master/img1.png)
+
+
 Then just use M-x package-list-packages to browse and install packages from MELPA and elsewhere.
