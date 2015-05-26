@@ -46,7 +46,7 @@
 (global-hl-line-mode t)
 
 ;; enable projectile
-(require 'projectile )
+(require 'projectile)
 (projectile-global-mode)
 
 ;; enable auto-complete
