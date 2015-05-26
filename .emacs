@@ -3,6 +3,7 @@
 (setq package-enable-at-startup nil) ; To avoid initializing twice
 (package-initialize)
 
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -53,4 +54,8 @@
 (require 'auto-complete)
 (global-auto-complete-mode t)
 
+(require 'auto-complete-config)
+(ac-config-default)
 
+;menu
+(setq ac-show-menu-immediately-on-auto-complete t)
