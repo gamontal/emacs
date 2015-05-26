@@ -3,6 +3,10 @@
 (setq package-enable-at-startup nil) ; To avoid initializing twice
 (package-initialize)
 
+; Stop Emacs from losing undo information by
+; setting very high limits for undo buffers
+(setq undo-limit 20000000)
+(setq undo-strong-limit 40000000)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -11,21 +15,23 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(custom-enabled-themes (quote (wheatgrass)))
+ '(display-battery-mode t)
+ '(display-time-mode t)
  '(inhibit-startup-screen t)
  '(initial-buffer-choice t)
  '(initial-frame-alist (quote ((vertical-scroll-bars))))
- '(menu-bar-mode nil)
  '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("melpa" . "http://melpa.org/packages/"))))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
  '(tool-bar-mode nil)
+ '(menu-bar-mode nil) ;disable menu bar on startup
  '(word-wrap t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 136 :width normal :foundry "outline" :family "Consolas"))))
+ '(default ((t (:inherit nil :stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 143 :width normal :foundry "outline" :family "MS Reference Sans Serif"))))
  '(cursor ((t (:background "white"))))
  '(font-lock-comment-face ((t (:foreground "spring green"))))
  '(font-lock-string-face ((t (:foreground "yellow1"))))
