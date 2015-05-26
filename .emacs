@@ -57,5 +57,12 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
-;menu
+; popup-menu
 (setq ac-show-menu-immediately-on-auto-complete t)
+
+; key-bindings
+(global-set-key (kbd "C-c s") 'eshell) ; C-c s opens eshell
+
+(global-set-key (kbd "C-c t") 'shell)  ; C-c t opens shell
+
+
