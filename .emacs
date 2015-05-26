@@ -31,6 +31,7 @@
  '(font-lock-string-face ((t (:foreground "yellow1"))))
  '(font-lock-variable-name-face ((t (:foreground "chartreuse"))))
  '(highlight ((t (:background "gray7"))))
+ '(isearch ((t (:background "red" :foreground "white"))))
  '(link ((t (:foreground "yellow green" :underline t))))
  '(minibuffer-prompt ((t (:foreground "magenta1"))))
  '(mode-line-buffer-id ((t (:background "blue" :foreground "white" :weight bold))))
@@ -42,6 +43,10 @@
 
 ;; fullscreen startup
 (w32-send-sys-command 61488)
+
+; display time and battery life on startup
+(display-time-mode t)
+(display-battery-mode t)
 
 ;; highlight rows
 (global-hl-line-mode t)
