@@ -32,17 +32,17 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "outline" :family "Consolas"))))
+ '(default ((t (:inherit nil :stipple nil :background "#2E3436" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 143 :width normal :foundry "outline" :family "Consolas"))))
  '(cursor ((t (:background "white"))))
- '(font-lock-comment-face ((t (:foreground "spring green"))))
+ '(font-lock-comment-face ((t (:foreground "SpringGreen3"))))
  '(font-lock-string-face ((t (:foreground "yellow1"))))
  '(font-lock-variable-name-face ((t (:foreground "chartreuse"))))
- '(highlight ((t (:background "gray7"))))
+ '(highlight ((t (:background "gray26" :foreground "white"))))
  '(isearch ((t (:background "red" :foreground "white"))))
- '(link ((t (:foreground "yellow green" :underline t))))
- '(minibuffer-prompt ((t (:foreground "magenta1"))))
- '(mode-line ((t (:background "#2B2B2B" :foreground "#8FB28F" :box (:line-width -1 :style released-button)))))
- '(mode-line-buffer-id ((t (:weight bold))))
+ '(link ((t (:foreground "SlateGray1" :underline t))))
+ '(minibuffer-prompt ((t (:foreground "light sea green" :weight semi-bold))))
+ '(mode-line ((t (:background "#222222" :foreground "#8FB28F" :box (:line-width -1 :style released-button)))))
+ '(mode-line-buffer-id ((t (:foreground "#FFA500" :weight bold))))
  '(mode-line-inactive ((t (:inherit mode-line :background "gray4" :foreground "grey80" :box (:line-width -1 :color "grey40") :weight light))))
  '(region ((t (:background "blue")))))
 
@@ -56,7 +56,7 @@
 (display-time-mode t)
 (display-battery-mode t)
 
-;; highlight rows
+; highlight rows
 (global-hl-line-mode t)
 
 ;; enable projectile
