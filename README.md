@@ -28,4 +28,4 @@ Select the Package Archives option and add the following link: http://melpa.org/
 ![ScreenShot](https://raw.github.com/gmontalvo5416/emacs-config/master/img1.png)
 
 
-Then just use M-x list-packages to browse and install packages from MELPA and elsewhere.
+Then just use <kbd>M-x</kbd> list-packages to browse and install packages from MELPA and elsewhere.
