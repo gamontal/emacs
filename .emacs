@@ -62,10 +62,12 @@
 ;; enable projectile
 (require 'projectile)
 (projectile-global-mode)
+(setq projectile-completion-system 'grizzl)
 
 ;; enable auto-complete
 (require 'auto-complete)
 (global-auto-complete-mode t)
+(setq projectile-enable-caching t)
 
 (require 'auto-complete-config)
 (ac-config-default)
@@ -78,4 +80,8 @@
 
 (global-set-key (kbd "C-c t") 'shell)  ; C-c t opens shell
 
-
+;; Activate org-mode
+(require 'org)
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
