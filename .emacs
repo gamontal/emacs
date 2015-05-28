@@ -3,10 +3,10 @@
 (setq package-enable-at-startup nil) ; To avoid initializing twice
 (package-initialize)
 
-; Stop Emacs from losing undo information by
-; setting very high limits for undo buffers
 (setq undo-limit 20000000)
 (setq undo-strong-limit 40000000)
+
+(setq initial-scratch-message ";Shall we play a game?") ; how about a nice game of chess?
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -18,12 +18,14 @@
  '(custom-safe-themes (quote ("6a9606327ecca6e772fba6ef46137d129e6d1888dcfc65d0b9b27a7a00a4af20" "90edd91338ebfdfcd52ecd4025f1c7f731aced4c9c49ed28cfbebb3a3654840b" default)))
  '(display-battery-mode t)
  '(display-time-mode t)
+ '(helm-autoresize-mode t)
  '(inhibit-startup-screen t)
  '(initial-buffer-choice t)
  '(initial-frame-alist (quote ((vertical-scroll-bars))))
  '(menu-bar-mode nil)
  '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("melpa" . "http://melpa.org/packages/"))))
  '(scroll-bar-mode nil)
+ '(send-mail-function (quote mailclient-send-it))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(word-wrap t))
@@ -37,7 +39,11 @@
  '(font-lock-comment-face ((t (:foreground "SpringGreen3"))))
  '(font-lock-string-face ((t (:foreground "yellow1"))))
  '(font-lock-variable-name-face ((t (:foreground "chartreuse"))))
- '(highlight ((t (:background "gray26" :foreground "white"))))
+ '(helm-candidate-number ((t (:foreground "white"))))
+ '(helm-match ((t (:foreground "chartreuse"))))
+ '(helm-selection ((((background dark)) (:background "gray30" :distant-foreground "black")) (((background light)) (:background "#b5ffd1" :distant-foreground "black"))))
+ '(helm-source-header ((t (:background "gray15" :foreground "white" :box (:line-width -1 :style released-button) :family "Sans Serif"))))
+ '(highlight ((t (:background "gray22" :foreground "white"))))
  '(isearch ((t (:background "red" :foreground "white"))))
  '(link ((t (:foreground "SlateGray1" :underline t))))
  '(minibuffer-prompt ((t (:foreground "light sea green" :weight semi-bold))))
@@ -57,7 +63,7 @@
 (display-battery-mode t)
 
 ; highlight rows
-(global-hl-line-mode t)
+;(global-hl-line-mode t)
 
 ;; enable projectile
 (require 'projectile)
@@ -79,6 +85,12 @@
 (global-set-key (kbd "C-c s") 'eshell) ; C-c s opens eshell
 
 (global-set-key (kbd "C-c t") 'shell)  ; C-c t opens shell
+
+(global-set-key (kbd "C-c r") 'helm-projectile)  ; C-c h init helm-projectile
+
+(global-set-key (kbd "M-x") 'helm-M-x)
+
+(global-set-key (kbd "C-c b") 'helm-buffers-list) 
 
 ;; Activate org-mode
 (require 'org)
