@@ -6,7 +6,7 @@
 (setq undo-limit 20000000)
 (setq undo-strong-limit 40000000)
 
-(setq initial-scratch-message ";Shall we play a game?") ; how about a nice game of chess?
+(setq initial-scratch-message ";Shall we play a game?")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -36,6 +36,7 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "#2E3436" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 143 :width normal :foundry "outline" :family "Consolas"))))
  '(cursor ((t (:background "white"))))
+ '(error ((t (:foreground "red" :weight bold))))
  '(font-lock-comment-face ((t (:foreground "SpringGreen3"))))
  '(font-lock-string-face ((t (:foreground "yellow1"))))
  '(font-lock-variable-name-face ((t (:foreground "chartreuse"))))
