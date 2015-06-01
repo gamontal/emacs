@@ -1,4 +1,3 @@
-
 (require 'package)
 (setq package-enable-at-startup nil) ; To avoid initializing twice
 (package-initialize)
@@ -35,7 +34,7 @@
  '(default ((t (:inherit nil :stipple nil :background "#2E3436" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 143 :width normal :foundry "outline" :family "Consolas"))))
  '(cursor ((t (:background "white"))))
  '(error ((t (:foreground "red" :weight bold))))
- '(font-lock-comment-face ((t (:foreground "SpringGreen3" :slant italic))))
+ '(font-lock-comment-face ((t (:foreground "gray74" :slant italic))))
  '(font-lock-string-face ((t (:foreground "yellow1"))))
  '(font-lock-variable-name-face ((t (:foreground "chartreuse"))))
  '(helm-candidate-number ((t (:foreground "white"))))
@@ -96,7 +95,7 @@
 (setq org-log-done t)
 
 ; Bright-red TODOs
- (setq todoenb-modes '(c++-mode c-mode emacs-lisp-mode))
+ (setq todoenb-modes '(c++-mode c-mode emacs-lisp-mode ruby-mode))
  (make-face 'font-lock-fixme-face)
  (make-face 'font-lock-study-face)
  (make-face 'font-lock-important-face)
@@ -112,4 +111,4 @@
  (modify-face 'font-lock-fixme-face "Red" nil nil t nil t nil nil)
  (modify-face 'font-lock-study-face "Yellow" nil nil t nil t nil nil)
  (modify-face 'font-lock-important-face "Yellow" nil nil t nil t nil nil)
- (modify-face 'font-lock-note-face "Dark Green" nil nil t nil t nil nil)
+ (modify-face 'font-lock-note-face "Magenta" nil nil t nil t nil nil)
