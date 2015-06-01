@@ -6,8 +6,6 @@
 (setq undo-limit 20000000)
 (setq undo-strong-limit 40000000)
 
-(setq initial-scratch-message ";Shall we play a game?")
-
 (custom-set-variables
  '(ansi-color-names-vector ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(custom-enabled-themes (quote (wheatgrass)))
@@ -20,7 +18,7 @@
  '(initial-frame-alist (quote ((vertical-scroll-bars))))
  '(menu-bar-mode nil)
  '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("melpa" . "http://melpa.org/packages/"))))
- '(scroll-bar-mode nil)
+ '(scroll-bar-mode (quote right))
  '(send-mail-function (quote mailclient-send-it))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
@@ -55,8 +53,6 @@
 (display-time-mode t)
 (display-battery-mode t)
 
-; highlight rows
-;(global-hl-line-mode t)
 
 ;; enable projectile
 (require 'projectile)
@@ -79,7 +75,7 @@
 
 (global-set-key (kbd "C-c t") 'shell)  ; C-c t opens shell
 
-(global-set-key (kbd "C-c P") 'helm-projectile)  ; C-c h init helm-projectile
+(global-set-key (kbd "C-c r") 'helm-projectile)  ; C-c h init helm-projectile
 
 (global-set-key (kbd "M-x") 'helm-M-x)
 
@@ -109,4 +105,3 @@
  (modify-face 'font-lock-study-face "Yellow" nil nil t nil t nil nil)
  (modify-face 'font-lock-important-face "Yellow" nil nil t nil t nil nil)
  (modify-face 'font-lock-note-face "Dark Green" nil nil t nil t nil nil)
-
