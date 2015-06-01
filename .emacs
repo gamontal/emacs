@@ -20,6 +20,7 @@
  '(initial-buffer-choice t)
  '(initial-frame-alist (quote ((vertical-scroll-bars))))
  '(menu-bar-mode nil)
+ '(minimap-window-location (quote right))
  '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("melpa" . "http://melpa.org/packages/"))))
  '(scroll-bar-mode (quote right))
  '(send-mail-function (quote mailclient-send-it))
@@ -31,7 +32,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#2E3436" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 143 :width normal :foundry "outline" :family "Consolas"))))
+ '(default ((t (:inherit nil :stipple nil :background "#2E3436" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "outline" :family "Consolas"))))
  '(cursor ((t (:background "white"))))
  '(error ((t (:foreground "red" :weight bold))))
  '(font-lock-comment-face ((t (:foreground "gray74" :slant italic))))
