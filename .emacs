@@ -2,8 +2,8 @@
 (setq package-enable-at-startup nil) ; To avoid initializing twice
 (package-initialize)
 
-(require 'cask "~/.cask/cask.el")
-(cask-initialize)
+;(require 'cask "~/.cask/cask.el")
+;(cask-initialize)
 
 (setq undo-limit 20000000)
 (setq undo-strong-limit 40000000)
