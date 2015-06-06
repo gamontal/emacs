@@ -35,7 +35,7 @@
  '(font-lock-string-face ((t (:foreground "yellow1"))))
  '(font-lock-variable-name-face ((t (:foreground "chartreuse"))))
  '(helm-candidate-number ((t (:foreground "white"))))
- '(helm-match ((t (:foreground "red"))))
+ '(helm-match ((t (:foreground "orangered"))))
  '(helm-selection ((((background dark)) (:background "gray30" :distant-foreground "black")) (((background light)) (:background "#b5ffd1" :distant-foreground "black"))))
  '(helm-source-header ((t (:background "gray15" :foreground "white" :box (:line-width -1 :style released-button) :family "Sans Serif"))))
  '(highlight ((t (:background "gray22" :foreground "white"))))
@@ -109,3 +109,5 @@
  (modify-face 'font-lock-study-face "Yellow" nil nil t nil t nil nil)
  (modify-face 'font-lock-important-face "Yellow" nil nil t nil t nil nil)
  (modify-face 'font-lock-note-face "Magenta" nil nil t nil t nil nil)
+
+(add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
