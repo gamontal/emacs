@@ -9,6 +9,10 @@
 (setq undo-strong-limit 40000000)
 
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(custom-enabled-themes (quote (wheatgrass)))
  '(custom-safe-themes (quote ("6a9606327ecca6e772fba6ef46137d129e6d1888dcfc65d0b9b27a7a00a4af20" "90edd91338ebfdfcd52ecd4025f1c7f731aced4c9c49ed28cfbebb3a3654840b" default)))
@@ -28,11 +32,15 @@
  '(tool-bar-mode nil)
  '(word-wrap t))
 (custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "#2E3436" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 151 :width normal :foundry "outline" :family "Consolas"))))
  '(cursor ((t (:background "white"))))
  '(error ((t (:foreground "red" :weight bold))))
  '(font-lock-comment-face ((t (:foreground "gray74" :slant italic))))
- '(font-lock-string-face ((t (:foreground "yellow1"))))
+ '(font-lock-string-face ((t (:foreground "SpringGreen1"))))
  '(font-lock-variable-name-face ((t (:foreground "chartreuse"))))
  '(helm-candidate-number ((t (:foreground "white"))))
  '(helm-match ((t (:foreground "orangered"))))
