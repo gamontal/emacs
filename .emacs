@@ -23,13 +23,13 @@
  '(inhibit-startup-screen t)
  '(initial-buffer-choice t)
  '(initial-frame-alist (quote ((vertical-scroll-bars))))
- '(menu-bar-mode nil)
  '(minimap-window-location (quote right))
  '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("melpa" . "http://melpa.org/packages/"))))
  '(scroll-bar-mode (quote right))
  '(send-mail-function (quote mailclient-send-it))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
+ '(menu-bar-mode nil)
  '(word-wrap t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
