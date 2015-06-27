@@ -9,6 +9,10 @@
 (setq undo-strong-limit 40000000)
 
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(custom-enabled-themes (quote (wheatgrass)))
  '(custom-safe-themes (quote ("6a9606327ecca6e772fba6ef46137d129e6d1888dcfc65d0b9b27a7a00a4af20" "90edd91338ebfdfcd52ecd4025f1c7f731aced4c9c49ed28cfbebb3a3654840b" default)))
@@ -28,6 +32,10 @@
  '(menu-bar-mode nil)
  '(word-wrap t))
 (custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "#2E3436" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 151 :width normal :foundry "outline" :family "Consolas"))))
  '(cursor ((t (:background "white"))))
  '(error ((t (:foreground "red" :weight bold))))
@@ -65,11 +73,55 @@
 
 ;; enable auto-complete
 (require 'auto-complete)
+; do default config for auto-complete
+(require 'auto-complete-config)
+(ac-config-default)
 (global-auto-complete-mode t)
 (setq projectile-enable-caching t)
 
 (require 'auto-complete-config)
 (ac-config-default)
+
+; start yasnippet with emacs
+(require 'yasnippet)
+(yas-global-mode 1)
+
+; initialize auto-complete-c-headers and gets called for c/c++ hooks
+(defun my:ac-c-header-init ()
+  (require 'auto-complete-c-headers)
+  (add-to-list 'ac-sources 'ac-source-c-headers))
+
+(add-hook 'c++-mode-hook 'my:ac-c-header-init)
+(add-hook 'c-mode-hook 'my:ac-c-header-init)
+
+;fix iedit bug
+(define-key global-map (kbd "C-c ;") 'iedit-mode)
+
+; start flymake-google-cppint-load
+; flymake initialization
+
+(defun my:flymake-google-init ()
+  (require 'flymake-google-cpplint)
+   (custom-set-variables 
+    '(flymake-google-cpplint-command "/Python34/Scripts/cpplint"))
+  (flymake-google-cpplint-load)
+)
+(add-hook 'c-mode-hook 'my:flymake-google-init)
+(add-hook 'c++-mode-hook 'my:flymake-google-init)
+
+; start google-c-style with emacs
+(require 'google-c-style)
+(add-hook 'c-mode-common-hook 'google-set-c-style)
+(add-hook 'c-mode-common-hook 'google-make-newline-indent)
+
+; turn on Semantic
+;(Semantic-mode 1)
+; add Semantic as a suggestion backend to auto complete
+;(defun my:add-semantic-to-autocomplete()
+; (add-to-list 'ac-sources 'ac-source-semantic)
+;)
+;(add-hook 'c-mode-common-hook 'my:add-semantic-to-autocomplete)
+
 
 ; popup-menu
 (setq ac-show-menu-immediately-on-auto-complete t)
