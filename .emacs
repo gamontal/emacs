@@ -1,4 +1,4 @@
-(require 'package)
+(require 'package) ; ** - requires package
 (setq package-enable-at-startup nil) ; To avoid initializing twice
 (package-initialize)
 
@@ -67,12 +67,12 @@
 (display-battery-mode t)
 
 ;; enable projectile
-(require 'projectile)
+(require 'projectile) ; **
 (projectile-global-mode)
 (setq projectile-completion-system 'grizzl)
 
 ;; enable auto-complete
-(require 'auto-complete)
+(require 'auto-complete) ; **
 ; do default config for auto-complete
 (require 'auto-complete-config)
 (ac-config-default)
@@ -83,25 +83,25 @@
 (ac-config-default)
 
 ; start yasnippet with emacs
-(require 'yasnippet)
+(require 'yasnippet) ; **
 (yas-global-mode 1)
 
 ; initialize auto-complete-c-headers and gets called for c/c++ hooks
 (defun my:ac-c-header-init ()
-  (require 'auto-complete-c-headers)
+  (require 'auto-complete-c-headers) ; **
   (add-to-list 'ac-sources 'ac-source-c-headers))
 
 (add-hook 'c++-mode-hook 'my:ac-c-header-init)
 (add-hook 'c-mode-hook 'my:ac-c-header-init)
 
 ;fix iedit bug
-(define-key global-map (kbd "C-c ;") 'iedit-mode)
+(define-key global-map (kbd "C-c ;") 'iedit-mode) ; **
 
 ; start flymake-google-cppint-load
 ; flymake initialization
 
 (defun my:flymake-google-init ()
-  (require 'flymake-google-cpplint)
+  (require 'flymake-google-cpplint) ; **
    (custom-set-variables 
     '(flymake-google-cpplint-command "/Python34/Scripts/cpplint"))
   (flymake-google-cpplint-load)
@@ -110,7 +110,7 @@
 (add-hook 'c++-mode-hook 'my:flymake-google-init)
 
 ; start google-c-style with emacs
-(require 'google-c-style)
+(require 'google-c-style) ; **
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
 
@@ -124,7 +124,7 @@
 
 
 ; popup-menu
-(setq ac-show-menu-immediately-on-auto-complete t)
+(setq ac-show-menu-immediately-on-auto-complete t) ; **
 
 ; key-bindings
 (global-set-key (kbd "C-c s") 'eshell) ; C-c s opens eshell
@@ -138,7 +138,7 @@
 (global-set-key (kbd "C-c b") 'helm-buffers-list) 
 
 ;; Activate org-mode
-(require 'org)
+(require 'org) ; **
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
