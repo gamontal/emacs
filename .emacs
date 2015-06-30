@@ -66,7 +66,11 @@
  '(sml/modified ((t (:inherit sml/not-modified :background "#222222" :foreground "Red" :weight bold))))
  '(sml/mule-info ((t (:inherit sml/global :background "#222222"))))
  '(sml/not-modified ((t (:inherit sml/global :background "#222222"))))
+ '(sml/position-percentage ((t (:inherit sml/prefix :background "grey22" :foreground "white" :weight normal))))
  '(sml/remote ((t (:inherit sml/global :background "#222222")))))
+
+;; fullscreen startup
+(w32-send-sys-command 61488)
 
 ;; These two lines are just examples
 (setq powerline-arrow-shape 'curve)
@@ -77,9 +81,6 @@
 
 ;; turn off bell 
  (setq ring-bell-function 'ignore)
-
-;; fullscreen startup
-(w32-send-sys-command 61488)
 
 ; display time and battery life on startup
 ;(display-time-mode t)
