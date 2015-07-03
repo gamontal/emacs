@@ -29,7 +29,7 @@
  '(minimap-window-location (quote right))
  '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("melpa" . "http://melpa.org/packages/"))))
  '(powerline-default-separator (quote arrow-fade))
- '(scroll-bar-mode (quote right))
+ '(scroll-bar-mode nil)
  '(send-mail-function (quote mailclient-send-it))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
