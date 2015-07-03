@@ -15,7 +15,7 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(custom-enabled-themes (quote (wheatgrass)))
- '(custom-safe-themes (quote ("26614652a4b3515b4bbbb9828d71e206cc249b67c9142c06239ed3418eff95e2" "6a9606327ecca6e772fba6ef46137d129e6d1888dcfc65d0b9b27a7a00a4af20" "90edd91338ebfdfcd52ecd4025f1c7f731aced4c9c49ed28cfbebb3a3654840b" default)))
+ '(custom-safe-themes (quote ("3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "26614652a4b3515b4bbbb9828d71e206cc249b67c9142c06239ed3418eff95e2" "6a9606327ecca6e772fba6ef46137d129e6d1888dcfc65d0b9b27a7a00a4af20" "90edd91338ebfdfcd52ecd4025f1c7f731aced4c9c49ed28cfbebb3a3654840b" default)))
  '(display-battery-mode nil)
  '(display-time-day-and-date nil)
  '(display-time-mode nil)
@@ -57,26 +57,26 @@
  '(mode-line ((t (:background "#222222" :foreground "#8FB28F" :box (:line-width -1 :style released-button)))))
  '(mode-line-buffer-id ((t (:foreground "#FFA500"))))
  '(mode-line-inactive ((t (:inherit mode-line :background "gray8" :foreground "grey80" :box (:line-width -1 :color "grey40") :weight light))))
- '(powerline-active2 ((t (:inherit mode-line :background "grey22"))))
+ '(powerline-active2 ((t (:inherit mode-line :background "grey22"))) t)
  '(region ((t (:background "blue"))))
- '(sml/filename ((t (:inherit sml/global :background "grey22" :foreground "gold"))))
- '(sml/folder ((t (:inherit sml/global :background "grey22" :foreground "#8FB28F" :weight normal))))
+ '(sml/filename ((t (:inherit sml/global :background "#222222" :foreground "gold" :weight light))))
+ '(sml/folder ((t (:inherit sml/global :background "#222222" :foreground "#8FB28F" :weight normal))))
  '(sml/line-number ((t (:inherit sml/global :background "#222222" :foreground "#8FB28F" :weight light))))
- '(sml/modes ((t (:inherit sml/global :background "grey22" :foreground "#8FB28F"))))
+ '(sml/modes ((t (:inherit sml/global :background "#222222" :foreground "#8FB28F"))))
  '(sml/modified ((t (:inherit sml/not-modified :background "#222222" :foreground "Red" :weight bold))))
  '(sml/mule-info ((t (:inherit sml/global :background "#222222"))))
  '(sml/not-modified ((t (:inherit sml/global :background "#222222"))))
- '(sml/position-percentage ((t (:inherit sml/prefix :background "grey22" :foreground "white" :weight normal))))
+ '(sml/position-percentage ((t (:inherit sml/prefix :background "#222222" :foreground "white" :weight normal))))
  '(sml/remote ((t (:inherit sml/global :background "#222222")))))
 
 ;; fullscreen startup
 (w32-send-sys-command 61488)
 
 ;; These two lines are just examples
-(setq powerline-arrow-shape 'curve)
-(setq powerline-default-separator-dir '(right . left))
+;(setq powerline-arrow-shape 'curve)
+;(setq powerline-default-separator-dir '(right . left))
 ;; These two lines you really need.
-(setq sml/theme 'powerline)
+;(setq sml/theme 'powerline)
 (sml/setup)
 
 ;; turn off bell 
