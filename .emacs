@@ -186,3 +186,8 @@
 
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js3-mode))
+
+;; enable aggressive indent mode
+ (global-aggressive-indent-mode 1)
+ (add-to-list 'aggressive-indent-excluded-modes 'html-mode)
+ (add-to-list 'aggressive-indent-excluded-modes 'c++-mode)
