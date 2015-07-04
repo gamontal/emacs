@@ -57,7 +57,7 @@
  '(minibuffer-prompt ((t (:foreground "light sea green"))))
  '(mode-line ((t (:background "#222222" :foreground "#8FB28F" :box (:line-width -1 :style released-button)))))
  '(mode-line-buffer-id ((t (:foreground "#FFA500"))))
- '(mode-line-inactive ((t (:inherit mode-line :background "gray8" :foreground "grey80" :box (:line-width -1 :color "grey40") :weight light))))
+ '(mode-line-inactive ((t (:inherit mode-line :background "gray8" :inverse-video nil :box (:line-width -1 :color "grey40") :weight light))))
  '(powerline-active2 ((t (:inherit mode-line :background "grey22"))) t)
  '(region ((t (:background "blue"))))
  '(sml/filename ((t (:inherit sml/global :background "#222222" :foreground "gold" :weight light))))
@@ -121,6 +121,7 @@
 ; start flymake-google-cppint-load
 ; flymake initialization
 
+;; Google C++ Style Guide
 (defun my:flymake-google-init ()
   (require 'flymake-google-cpplint) ; **
    (custom-set-variables 
