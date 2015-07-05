@@ -32,6 +32,7 @@
  '(scroll-bar-mode nil)
  '(send-mail-function (quote mailclient-send-it))
  '(show-paren-mode t)
+ '(sml/modified-char "+")
  '(tool-bar-mode nil)
  '(word-wrap t))
 (custom-set-faces
@@ -188,6 +189,6 @@
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js3-mode))
 
 ;; enable aggressive indent mode
- (global-aggressive-indent-mode 1)
- (add-to-list 'aggressive-indent-excluded-modes 'html-mode)
- (add-to-list 'aggressive-indent-excluded-modes 'c++-mode)
+ ;(global-aggressive-indent-mode 1)
+ ;(add-to-list 'aggressive-indent-excluded-modes 'html-mode)
+ ;(add-to-list 'aggressive-indent-excluded-modes 'c++-mode)
