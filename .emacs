@@ -2,9 +2,6 @@
 (setq package-enable-at-startup nil) ; To avoid initializing twice
 (package-initialize)
 
-;(require 'cask "~/.cask/cask.el")
-;(cask-initialize)
-
 (setq undo-limit 20000000)
 (setq undo-strong-limit 40000000)
 
@@ -70,6 +67,14 @@
  '(sml/not-modified ((t (:inherit sml/global :background "#222222"))))
  '(sml/position-percentage ((t (:inherit sml/prefix :background "#222222" :foreground "white" :weight normal))))
  '(sml/remote ((t (:inherit sml/global :background "#222222")))))
+
+(setq backup-directory-alist '(("." . "~/.emacs.d/backup"))
+  backup-by-copying t    ; Don't delink hardlinks
+  version-control t      ; Use version numbers on backups
+  delete-old-versions t  ; Automatically delete excess backups
+  kept-new-versions 20   ; how many of the newest versions to keep
+  kept-old-versions 5    ; and how many of the old
+  )
 
 ;; fullscreen startup
 (w32-send-sys-command 61488)
