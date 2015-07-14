@@ -1,4 +1,4 @@
-(require 'package) 
+(require 'package) ; ** - requires package
 (setq package-enable-at-startup nil) ; To avoid initializing twice
 (package-initialize)
 
@@ -6,6 +6,10 @@
 (setq undo-strong-limit 40000000)
 
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(custom-enabled-themes (quote (wheatgrass)))
  '(custom-safe-themes (quote ("3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "26614652a4b3515b4bbbb9828d71e206cc249b67c9142c06239ed3418eff95e2" "6a9606327ecca6e772fba6ef46137d129e6d1888dcfc65d0b9b27a7a00a4af20" "90edd91338ebfdfcd52ecd4025f1c7f731aced4c9c49ed28cfbebb3a3654840b" default)))
@@ -29,6 +33,10 @@
  '(tool-bar-mode nil)
  '(word-wrap t))
 (custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "#2E3436" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 181 :width normal :foundry "outline" :family "Consolas"))))
  '(cursor ((t (:background "white"))))
  '(error ((t (:foreground "red" :weight bold))))
@@ -86,12 +94,12 @@
 ;(display-battery-mode t)
 
 ;; enable projectile
-(require 'projectile) 
+(require 'projectile) ; **
 (projectile-global-mode)
 (setq projectile-completion-system 'grizzl)
 
 ;; enable auto-complete
-(require 'auto-complete) 
+(require 'auto-complete) ; **
 ; do default config for auto-complete
 (require 'auto-complete-config)
 (ac-config-default)
@@ -102,12 +110,12 @@
 (ac-config-default)
 
 ; start yasnippet with emacs
-(require 'yasnippet) 
+(require 'yasnippet) ; **
 (yas-global-mode 1)
 
 ; initialize auto-complete-c-headers and gets called for c/c++ hooks
 (defun my:ac-c-header-init ()
-  (require 'auto-complete-c-headers) 
+  (require 'auto-complete-c-headers) ; **
   (add-to-list 'ac-sources 'ac-source-c-headers))
 
 (add-hook 'c++-mode-hook 'my:ac-c-header-init)
@@ -116,20 +124,32 @@
 ;fix iedit bug
 (define-key global-map (kbd "C-c ;") 'iedit-mode) ; **
 
+; start flymake-google-cppint-load
+; flymake initialization
+
 ;; Google C++ Style Guide
 (defun my:flymake-google-init ()
-  (require 'flymake-google-cpplint) 
+  (require 'flymake-google-cpplint) ; **
    (custom-set-variables 
     '(flymake-google-cpplint-command "/Python34/Scripts/cpplint"))
   (flymake-google-cpplint-load)
 )
 (add-hook 'c-mode-hook 'my:flymake-google-init)
-(add-hook 'c++-mode-hook 'my:flymake-google-init)
+;(add-hook 'c++-mode-hook 'my:flymake-google-init) ; temporary disabled 
 
 ; start google-c-style with emacs
-(require 'google-c-style) ; **
+(require 'google-c-style) 
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
+
+; turn on Semantic
+;(Semantic-mode 1)
+; add Semantic as a suggestion backend to auto complete
+;(defun my:add-semantic-to-autocomplete()
+; (add-to-list 'ac-sources 'ac-source-semantic)
+;)
+;(add-hook 'c-mode-common-hook 'my:add-semantic-to-autocomplete)
+
 
 ; popup-menu
 (setq ac-show-menu-immediately-on-auto-complete t) ; **
@@ -146,7 +166,7 @@
 (global-set-key (kbd "C-c b") 'helm-buffers-list) 
 
 ;; Activate org-mode
-(require 'org) 
+(require 'org) ; **
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
