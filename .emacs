@@ -142,15 +142,6 @@
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
 
-; turn on Semantic
-;(Semantic-mode 1)
-; add Semantic as a suggestion backend to auto complete
-;(defun my:add-semantic-to-autocomplete()
-; (add-to-list 'ac-sources 'ac-source-semantic)
-;)
-;(add-hook 'c-mode-common-hook 'my:add-semantic-to-autocomplete)
-
-
 ; popup-menu
 (setq ac-show-menu-immediately-on-auto-complete t) 
 
