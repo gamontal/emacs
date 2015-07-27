@@ -142,6 +142,15 @@
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
 
+; turn on Semantic
+;(Semantic-mode 1)
+; add Semantic as a suggestion backend to auto complete
+;(defun my:add-semantic-to-autocomplete()
+; (add-to-list 'ac-sources 'ac-source-semantic)
+;)
+;(add-hook 'c-mode-common-hook 'my:add-semantic-to-autocomplete)
+
+
 ; popup-menu
 (setq ac-show-menu-immediately-on-auto-complete t) 
 
@@ -189,3 +198,11 @@
 ; actionscript
 (autoload 'actionscript-mode "actionscript-mode" "Major mode for actionscript." t)
 (add-to-list 'auto-mode-alist '("\\.as$" . actionscript-mode))
+
+;; visual-basic-mode
+
+(add-to-list 'load-path "~/.emacs.d/")
+(load "visual-basic-mode.el")
+(autoload 'visual-basic-mode "visual-basic-mode" "Visual Basic mode." t)
+(setq auto-mode-alist (append '(("\\.\\(frm\\|bas\\|cls\\)$" .
+visual-basic-mode)) auto-mode-alist))
