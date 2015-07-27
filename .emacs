@@ -194,6 +194,7 @@
 
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js3-mode))
+(add-to-list 'auto-mode-alist '("\\.vb\\'" . visual-basic-mode))
 
 ; actionscript
 (autoload 'actionscript-mode "actionscript-mode" "Major mode for actionscript." t)
