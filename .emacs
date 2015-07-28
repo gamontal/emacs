@@ -212,8 +212,8 @@ visual-basic-mode)) auto-mode-alist))
 (require 'circe nil t)
 
 ;; enable Zone Mode for all buffers after Emacs is idle for 2 minutes
-(require 'zone)
-(zone-when-idle 120)
+;(require 'zone)
+;(zone-when-idle 120)
 ;;;
 
 ;; zone-choose
@@ -227,9 +227,9 @@ visual-basic-mode)) auto-mode-alist))
     (let ((zone-programs (list (intern pgm))))
       (zone)))
 
-(add-to-list 'load-path "~/.emacs.d/zone-matrix/")
-(require 'zone-matrix)
-(require 'zone-matrix-settings)
-(require 'zone-settings)
+;(add-to-list 'load-path "~/.emacs.d/zone-matrix/")
+;(require 'zone-matrix)
+;(require 'zone-matrix-settings)
+;(require 'zone-settings)
 
-(setq zone-programs [zone-matrix])
+;(setq zone-programs [zone-matrix])
