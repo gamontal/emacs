@@ -207,3 +207,29 @@
 (autoload 'visual-basic-mode "visual-basic-mode" "Visual Basic mode." t)
 (setq auto-mode-alist (append '(("\\.\\(frm\\|bas\\|cls\\)$" .
 visual-basic-mode)) auto-mode-alist))
+
+;; circe - *****
+(require 'circe nil t)
+
+;; enable Zone Mode for all buffers after Emacs is idle for 2 minutes
+(require 'zone)
+(zone-when-idle 120)
+;;;
+
+;; zone-choose
+(defun zone-choose (pgm)
+    "Choose a PGM to run for `zone'."
+    (interactive
+     (list
+      (completing-read
+       "Program: "
+       (mapcar 'symbol-name zone-programs))))
+    (let ((zone-programs (list (intern pgm))))
+      (zone)))
+
+(add-to-list 'load-path "~/.emacs.d/zone-matrix/")
+(require 'zone-matrix)
+(require 'zone-matrix-settings)
+(require 'zone-settings)
+
+(setq zone-programs [zone-matrix])
