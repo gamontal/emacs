@@ -1,4 +1,4 @@
-(require 'package) ; ** - requires package
+(require 'package) ; 
 (setq package-enable-at-startup nil) ; To avoid initializing twice
 (package-initialize)
 
@@ -55,7 +55,7 @@
  '(minibuffer-prompt ((t (:foreground "light sea green"))))
  '(mode-line ((t (:background "#222222" :foreground "#8FB28F" :box (:line-width -1 :style released-button)))))
  '(mode-line-buffer-id ((t (:foreground "#FFA500"))))
- '(mode-line-inactive ((t (:inherit mode-line :background "gray8" :inverse-video nil :box (:line-width -1 :color "grey40") :weight light))))
+ '(mode-line-inactive ((t (:inherit mode-line :background "gray13" :foreground "gray60" :inverse-video nil :box (:line-width -1 :color "grey40") :weight light))))
  '(powerline-active2 ((t (:inherit mode-line :background "grey22"))) t)
  '(region ((t (:background "blue"))))
  '(sml/filename ((t (:inherit sml/global :background "#222222" :foreground "gold" :weight light))))
@@ -227,9 +227,9 @@ visual-basic-mode)) auto-mode-alist))
     (let ((zone-programs (list (intern pgm))))
       (zone)))
 
-;(add-to-list 'load-path "~/.emacs.d/zone-matrix/")
-;(require 'zone-matrix)
-;(require 'zone-matrix-settings)
-;(require 'zone-settings)
+(add-to-list 'load-path "~/.emacs.d/zone-matrix/")
+(require 'zone-matrix)
+(require 'zone-matrix-settings)
+(require 'zone-settings)
 
-;(setq zone-programs [zone-matrix])
+(setq zone-programs [zone-matrix])
