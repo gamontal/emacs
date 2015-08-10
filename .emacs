@@ -6,6 +6,10 @@
 (setq undo-strong-limit 40000000)
 
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(custom-enabled-themes (quote (wheatgrass)))
  '(custom-safe-themes (quote ("3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "26614652a4b3515b4bbbb9828d71e206cc249b67c9142c06239ed3418eff95e2" "6a9606327ecca6e772fba6ef46137d129e6d1888dcfc65d0b9b27a7a00a4af20" "90edd91338ebfdfcd52ecd4025f1c7f731aced4c9c49ed28cfbebb3a3654840b" default)))
@@ -29,11 +33,15 @@
  '(tool-bar-mode nil)
  '(word-wrap t))
 (custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "#2E3436" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 181 :width normal :foundry "outline" :family "Consolas"))))
  '(cursor ((t (:background "white"))))
  '(error ((t (:foreground "red" :weight bold))))
  '(eshell-prompt ((t (:foreground "gold" :weight bold))) t)
- '(font-lock-comment-face ((t (:foreground "gray74" :slant italic))))
+ '(font-lock-comment-face ((t (:foreground "yellow" :slant italic))))
  '(font-lock-string-face ((t (:foreground "SpringGreen1"))))
  '(font-lock-variable-name-face ((t (:foreground "chartreuse"))))
  '(helm-candidate-number ((t (:foreground "white"))))
@@ -91,15 +99,15 @@
 (setq projectile-completion-system 'grizzl)
 
 ;; enable auto-complete
-(require 'auto-complete) 
+;(require 'auto-complete) 
 ; do default config for auto-complete
-(require 'auto-complete-config)
-(ac-config-default)
-(global-auto-complete-mode t)
-(setq projectile-enable-caching t)
+;(require 'auto-complete-config)
+;(ac-config-default)
+;(global-auto-complete-mode t)
+;(setq projectile-enable-caching t)
 
-(require 'auto-complete-config)
-(ac-config-default)
+;(require 'auto-complete-config)
+;(ac-config-default)
 
 ; start yasnippet with emacs
 (require 'yasnippet) 
@@ -166,7 +174,7 @@
 (setq org-log-done t)
 
 ; Bright-red TODOs
- (setq todoenb-modes '(c++-mode c-mode emacs-lisp-mode ruby-mode html-mode))
+ (setq todoenb-modes '(c++-mode c-mode emacs-lisp-mode ruby-mode html-mode js3-mode web-mode))
  (make-face 'font-lock-fixme-face)
  (make-face 'font-lock-study-face)
  (make-face 'font-lock-important-face)
@@ -225,3 +233,8 @@ visual-basic-mode)) auto-mode-alist))
 (require 'zone-settings)
 
 (setq zone-programs [zone-matrix])
+
+;; js2-refactor
+(require 'js2-refactor)
+(add-hook 'js2-mode-hook #'js2-refactor-mode)
+(js2r-add-keybindings-with-prefix "C-c C-m")
