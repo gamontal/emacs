@@ -12,7 +12,7 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(custom-enabled-themes (quote (wheatgrass)))
- '(custom-safe-themes (quote ("3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "26614652a4b3515b4bbbb9828d71e206cc249b67c9142c06239ed3418eff95e2" "6a9606327ecca6e772fba6ef46137d129e6d1888dcfc65d0b9b27a7a00a4af20" "90edd91338ebfdfcd52ecd4025f1c7f731aced4c9c49ed28cfbebb3a3654840b" default)))
+ '(custom-safe-themes (quote ("bed4d169698488b8b5b90f7dbdbaca2e7b9c4a18727adbb7b3ddcb4df0577ce0" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "26614652a4b3515b4bbbb9828d71e206cc249b67c9142c06239ed3418eff95e2" "6a9606327ecca6e772fba6ef46137d129e6d1888dcfc65d0b9b27a7a00a4af20" "90edd91338ebfdfcd52ecd4025f1c7f731aced4c9c49ed28cfbebb3a3654840b" default)))
  '(display-battery-mode nil)
  '(display-time-day-and-date nil)
  '(display-time-mode nil)
@@ -75,9 +75,6 @@
   kept-new-versions 20   ; how many of the newest versions to keep
   kept-old-versions 5    ; and how many of the old
   )
-
-;; fullscreen startup
-(w32-send-sys-command 61488)
 
 ;; These two lines are just examples
 ;(setq powerline-arrow-shape 'curve)
@@ -233,6 +230,9 @@ visual-basic-mode)) auto-mode-alist))
 (require 'zone-settings)
 
 (setq zone-programs [zone-matrix])
+
+
+
 
 ;; js2-refactor
 (require 'js2-refactor)
