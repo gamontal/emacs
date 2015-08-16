@@ -76,13 +76,6 @@
   kept-old-versions 5    ; and how many of the old
   )
 
-;; These two lines are just examples
-;(setq powerline-arrow-shape 'curve)
-;(setq powerline-default-separator-dir '(right . left))
-;; These two lines you really need.
-;(setq sml/theme 'powerline)
-(sml/setup)
-
 ;; turn off bell 
  (setq ring-bell-function 'ignore)
 
